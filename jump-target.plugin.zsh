@@ -53,3 +53,5 @@ function jump-target() {
         zle -cR ''
     }
 }
+zle -N jump-target
+bindkey "\ej" jump-target
