@@ -1,5 +1,10 @@
 # Jump to a character in the command line
 function jump-target() {
+  if (( $#BUFFER == 0 )) then
+    zle -M "Can't jump, buffer is empty."
+    return
+  fi
+
   typeset -g ZSH_JUMP_TARGET_CHOICES
   typeset -g ZSH_JUMP_TARGET_STYLE
 
