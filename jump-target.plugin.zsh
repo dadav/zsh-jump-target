@@ -49,7 +49,7 @@ function jump-target() {
       read -k target_choice
 
       if (( ${+target_to_buffer_idx[$target_choice]} )); then
-          (( CURSOR = target_to_buffer_idx[$target_choice] - 1 ))
+          (( CURSOR = target_to_buffer_idx[$target_choice] ))
       fi
 
   } always {
